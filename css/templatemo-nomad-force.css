@@ -51,6 +51,44 @@ body {
 /*---------------------------------------
   TYPOGRAPHY               
 -----------------------------------------*/
+/* Equalize news thumbnails height for better layout */
+.news-thumb .news-image-wrapper {
+  height: 250px; /* You can tweak this */
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-thumb .news-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add consistent spacing between news cards */
+.news-thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.news-title-link {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .news .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
 
 h2,
 h3,
